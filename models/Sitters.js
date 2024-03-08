@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const bcrypt = require("bcrypt");
+const sequelize = require("../config/connection");
 
 class Sitter extends Model {
   checkPassword(loginPw) {
@@ -36,37 +36,38 @@ Sitter.init(
       },
     },
     address: {
-        type: DataTypes.STRING,
-        allowNull: false,  
-  },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     city: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     state: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     zip: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     phone: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     activitylevelLow: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false,
-      },
-      activitylevelMedium: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false,
-      },
-      activitylevelHigh: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false,
-      },
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+    activitylevelMedium: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+    activitylevelHigh: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+  },
   {
     hooks: {
       beforeCreate: async (newSitterData) => {
@@ -74,7 +75,10 @@ Sitter.init(
         return newSitterData;
       },
       beforeUpdate: async (updatedSitterData) => {
-        updatedSitterData.password = await bcrypt.hash(updatedSitterData.password, 10);
+        updatedSitterData.password = await bcrypt.hash(
+          updatedSitterData.password,
+          10
+        );
         return updatedSitterData;
       },
     },
@@ -82,7 +86,7 @@ Sitter.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Sitter',
+    modelName: "Sitter",
   }
 );
 
