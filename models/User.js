@@ -2,13 +2,13 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class Pet extends Model {
+class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
-Pet.init(
+User.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -36,45 +36,33 @@ Pet.init(
       },
     },
     address: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     city: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     state: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     zip: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
-    phone: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    isSitter: {
+        type: DataTypes.Boolean,
+        defaultValue: false,
     },
-    pet_type: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    isOwner: {
+        type: DataTypes.Boolean,
+        defaultValue: false,
     },
-    pet_breed: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    activityLevelLow: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    activityLevelMedium: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    activityLevelHigh: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
+    activityLevel: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    }
   },
   {
     hooks: {
@@ -91,8 +79,8 @@ Pet.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'pet',
+    modelName: 'User',
   }
 );
 
-module.exports = Pet;
+module.exports = User;
