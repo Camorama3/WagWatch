@@ -51,15 +51,18 @@ User.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
-    isSitter: {
+    is_sitter: {
         type: DataTypes.Boolean,
         defaultValue: false,
     },
-    isOwner: {
+    is_owner: {
         type: DataTypes.Boolean,
         defaultValue: false,
     },
-    activityLevel: {
+    breed: {
+      type: DataTypes.TEXT
+    },
+    activity_level: {
         type: DataTypes.STRING,
         allowNull: false,
     }
