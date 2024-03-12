@@ -11,7 +11,7 @@ Booking.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    user_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
