@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WagWatch</title>
+<link rel="stylesheet" href="/path-to-your-stylesheet.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>WagWatch</h1>
+  {{#if logged_in}}
+  <a href="/logout">Logout</a>
+  {{else}}
+  <a href="/login">Login</a>
+  {{/if}}
+  <a href="/signup">Sign-Up</a>
+</div>
+
+<div class="main">
+  <div>
+    <h2>About us!</h2>
+    <p>Some text about who we are and what we do.</p>
+  </div>
+  <div>
+    <h2>Photos</h2>
+    <!-- Photos content will go here -->
+  </div>
+  <div>
+    <h2>Pets of the Day</h2>
+    <p>Check out the Dog of the Day!</p>
+    <!-- Cat of the Day api will go here -->
+    <p>Check out the Cat of the Day!</p>
+    <!-- Dog of the Day api will go here -->
+  </div>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+{{#if logged_in}}
+<script src="/public/js/logout.js"></script>
+{{/if}}
+</body>
+</html>
