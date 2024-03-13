@@ -20,7 +20,7 @@ Booking.init(
       allowNull: false,  
     },
     booking_date: {
-      type: DataTypes.Date,
+      type: DataTypes.STRING,
       allowNull: false,  
     },
     booking_duration: {
