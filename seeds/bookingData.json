@@ -1,0 +1,10 @@
+[
+    {
+        "name": "George",
+        "booking_location": "Milwaukee, Wisconsin",
+        "booking_date": "2020-01-01",
+        "booking_duration": "1 hour",
+        "booking_description": "Please walk my dog and feed him dinner. He likes steak!!!"
+
+    }
+]
