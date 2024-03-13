@@ -12,3 +12,25 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+router.get('/booking', async (req, res) => {
+    try {
+        const bookingData = await Booking.findAll(req.params.booking, {
+            include: [
+                {
+                    model: Booking,
+                    attributes: [
+                        'id',
+                        'name',
+                        'booking_location',
+                        'booking_date',
+                        'booking_duration',
+                        'booking_description',
+                    ]
+                }
+            ]
+        }
+    }
+});
+
+module.exports = router;
