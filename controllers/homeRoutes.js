@@ -37,4 +37,14 @@ router.get('/booking', async (req, res) => {
     }
 });
 
+router.get('/ownerprofile', (req, res) => {
+    if (req.session.logged_in) {
+        res.render('ownerprofile', {
+            logged_in: req.session.logged_in
+        });
+    } else {
+        res.redirect('/login');
+    }
+})
+
 module.exports = router;

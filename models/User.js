@@ -52,11 +52,11 @@ User.init(
         allowNull: false,
     },
     is_sitter: {
-        type: DataTypes.Boolean,
+        type: DataTypes.BOOLEAN,
         defaultValue: false,
     },
     is_owner: {
-        type: DataTypes.Boolean,
+        type: DataTypes.BOOLEAN,
         defaultValue: false,
     },
     breed: {
