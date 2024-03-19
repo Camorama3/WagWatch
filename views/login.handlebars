@@ -1,23 +1,23 @@
 {{!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> --}}
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div class="p-4">
-        <h2 class="text-2xl font-bold">Owner's Login</h2>
+        <h2 class="text-2xl font-bold">Login</h2>
 
         <form class="owners login-form">
             <div class="mb-4">
-                <label for="email-login" class="block">Email:</label>
-                <input class="form-input" type="text" id="user-owner-email-login" />
+                <label for="user-email-login" class="block">Email:</label>
+                <input class="form-input" type="text" id="user-email-login" />
             </div>
             <div class="mb-4">
-                <label for="password-login" class="block">Password:</label>
-                <input class="form-input" type="password" id="user-owner-password-login" />
+                <label for="user-password-login" class="block">Password:</label>
+                <input class="form-input" type="password" id="user-password-login" />
             </div>
             <div>
                 <button class="btn btn-primary" type="submit">Login</button>
             </div>
         </form>
     </div>
-    <div class="p-4">
+    {{!-- <div class="p-4">
         <h2 class="text-2xl font-bold">Sitter's Login</h2>
 
         <form class="sitters login-form">
@@ -33,29 +33,29 @@
                 <button class="btn btn-primary" type="submit">Login</button>
             </div>
         </form>
-    </div>
+    </div> --}}
     <div class="p-4">
-        <h2 class="text-2xl font-bold">Owner's Signup</h2>
+        <h2 class="text-2xl font-bold">Signup</h2>
 
         <form class="owners signup-form">
             <div class="mb-4">
-                <label for="name-signup" class="block">Name:</label>
-                <input class="form-input" type="text" id="name-signup" />
+                <label for="user-name-signup" class="block">Name:</label>
+                <input class="form-input" type="text" id="user-name-signup" />
             </div>
             <div class="mb-4">
-                <label for="email-signup" class="block">Email:</label>
-                <input class="form-input" type="text" id="email-signup" />
+                <label for="user-email-signup" class="block">Email:</label>
+                <input class="form-input" type="text" id="user-email-signup" />
             </div>
             <div class="mb-4">
-                <label for="password-signup" class="block">Password:</label>
-                <input class="form-input" type="password" id="password-signup" />
+                <label for="user-password-signup" class="block">Password:</label>
+                <input class="form-input" type="password" id="user-password-signup" />
             </div>
             <div>
                 <button class="btn btn-primary" type="submit">Signup</button>
             </div>
         </form>
     </div>
-    <div class="p-4">
+    {{!-- <div class="p-4">
         <h2 class="text-2xl font-bold">Sitter's Signup</h2>
 
         <form class="sitters signup-form">
@@ -75,7 +75,7 @@
                 <button class="btn btn-primary" type="submit">Signup</button>
             </div>
         </form>
-    </div>
+    </div> --}}
 </div>
 
 <script src="./js/login.js"></script>
