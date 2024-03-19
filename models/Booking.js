@@ -15,21 +15,24 @@ Booking.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    booking_location: {
+    location: {
       type: DataTypes.STRING,
       allowNull: false,  
     },
-    booking_date: {
+    date: {
       type: DataTypes.STRING,
       allowNull: false,  
     },
-    booking_duration: {
+    description: {
       type: DataTypes.STRING,
-      allowNull: false,  
-    },
-    booking_description: {
-      type: DataTypes.TEXT,
       allowNull: false  
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
   },
   {
@@ -37,7 +40,7 @@ Booking.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Booking',
+    modelName: 'booking',
   }
 );
 
