@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/booking', async (req, res) => {
+router.get('/booking/:id', async (req, res) => {
     try {
         const bookingData = await Booking.findAll(req.params.booking, {
             include: [
@@ -30,31 +30,39 @@ router.get('/booking', async (req, res) => {
                 }
             ]
         });
-// added in booking data render
+
         const booking = bookingData.get({ plain: true});
+
         res.render('booking', {
             ...booking,
             logged_in: res.session.logged_in
         });
-    }
-    catch (err) {
+    } catch(err) {
         res.status(500).json(err);
     }
 });
 
-router.get('/ownerprofile', withAuth, (req, res) => {
-    if (req.session.logged_in) {
-        res.render('ownerprofile', {
-            logged_in: req.session.logged_in
+router.get('/profile', withAuth, async (req, res) => {
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+
         });
-    } else {
-        res.redirect('/login');
+
+        const user = userData.get({ plain: true });
+
+        res.render('profile', {
+            ...user,
+            logged_in: true
+        });
+    } catch(err) {
+        res.status(500).json(err);
     }
 });
-// added in login route
+
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
-      res.redirect('/ownerprofile');
+      res.redirect('/profile');
       return;
     }
     res.render('login');
