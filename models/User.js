@@ -39,33 +39,27 @@ User.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
-    city: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    state: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    zip: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    is_sitter: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false,
-    },
-    is_owner: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false,
-    },
+    // city: {
+    //     type: DataTypes.STRING,
+    //     allowNull: false,
+    // },
+    // state: {
+    //     type: DataTypes.STRING,
+    //     allowNull: false,
+    // },
+    // zip: {
+    //     type: DataTypes.STRING,
+    //     allowNull: false,
+    // },
     breed: {
-      type: DataTypes.TEXT
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-    activity_level: {
+    temperament: {
         type: DataTypes.STRING,
         allowNull: false,
-    }
+    },
+
   },
   {
     hooks: {
@@ -82,7 +76,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'User',
+    modelName: 'user',
   }
 );
 
