@@ -17,7 +17,7 @@ If you would like to give WagWatch a try use the link below:
 
 ## Usage
 
-Fel free to visit the application using the link above and make an account by pressing the log in or sign up button on the page. You can also check out the dog and cat of the day on the homepage! The dogs and cats are updated anew every day. Once you make a profile, you can find people to watch your pets while you're away or you can find people to pet-sit their animals!
+Feel free to visit the application using the link above and make an account by pressing the log in or sign up button on the page. You can also check out the dog and cat of the day on the homepage! The dogs and cats are updated anew every day. Once you make a profile, you can find people to watch your pets while you're away or you can find people to pet-sit their animals!
 
 ## Screenshots
 
