@@ -1,8 +1,8 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
-  const userEmail = document.querySelector('#user-owner-email-login').value.trim();
-  const userPassword = document.querySelector('#user-owner-password-login').value.trim();
+  const userEmail = document.querySelector('#user-email-login').value.trim();
+  const userPassword = document.querySelector('#user-password-login').value.trim();
   // const sitterEmail = document.querySelector('#sitter-email-login').value.trim();
   // const sitterPassword = document.querySelector('#sitter-password-login').value.trim();
 
@@ -38,9 +38,9 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const userName = document.querySelector('#user-owner-name-signup').value.trim();
-  const userEmail = document.querySelector('#user-owner-email-signup').value.trim();
-  const userPassword = document.querySelector('#user-owner-password-signup').value.trim();
+  const userName = document.querySelector('#user-name-signup').value.trim();
+  const userEmail = document.querySelector('#user-email-signup').value.trim();
+  const userPassword = document.querySelector('#user-password-signup').value.trim();
 
 
   if (userName && userEmail && userPassword) {

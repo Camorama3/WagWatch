@@ -1,27 +1,65 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WagWatch</title>
-<link rel="stylesheet" href="/path-to-your-stylesheet.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WagWatch</title>
+    <link rel="stylesheet" href="/public/css/jass.css" />
+  </head>
 
-<div class="header">
-  <h1>WagWatch</h1>
-  {{#if logged_in}}
-  <a href="/logout">Logout</a>
-  {{else}}
-  <a href="/login">Login</a>
-  {{/if}}
-  <a href="/signup">Sign-Up</a>
-</div>
-<main class="main">
-  {{{ body }}}
-</main>
-{{#if logged_in}}
-<script src="/public/js/logout.js"></script>
-{{/if}}
-</body>
+  <body> 
+    <div>
+      <header>
+        <h1>WagWatch</h1>
+
+        <nav>
+          {{#if logged_in}}
+          <a href="/profile">Profile</a>
+          <button>Logout</button>
+          {{else}}
+          <a href="/login">Login</a>
+          {{/if}}
+          <a href="/signup">Sign-Up</a>
+        </nav>
+      </header>
+
+      <main>
+
+      </main>
+
+      <footer>
+
+      </footer>
+    </div>
+
+    {{#if logged_in}}
+    <script src="/public/js/logout.js"></script>
+    {{/if}}
+  </body>
 </html>
+
+{{!-- commented out old code --}}
+  {{!-- <body>
+    <div class="header">
+      <h1>WagWatch</h1>
+
+      {{#if logged_in}}
+        <a href="/logout">Logout</a>
+      {{else}}
+        <a href="/login">Login</a>
+      {{/if}}
+      <a href="/signup">Sign-Up</a>
+    </div>
+
+    <main class="main">
+      {{{body}}}
+    </main>
+
+    <footer>
+
+    </footer>
+
+    {{#if logged_in}}
+      <script src="/public/js/logout.js"></script>
+    {{/if}}
+  </body> --}}
+
