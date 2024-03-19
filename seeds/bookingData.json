@@ -1,10 +1,9 @@
 [
     {
         "name": "George",
-        "booking_location": "Milwaukee, Wisconsin",
-        "booking_date": "2020-01-01",
-        "booking_duration": "1 hour",
-        "booking_description": "Please walk my dog and feed him dinner. He likes steak!!!"
+        "location": "Milwaukee, Wisconsin",
+        "date": "2024-04-01",
+        "description": "My dog enjoys long walks on the beach and his steaks medium rare. When filling his water bowl please use the bottled Fiji water in the fridge. He will not go outside without his bowtie and sweater so please ensure you get him dressed before leaving the house."
 
     }
 ]
